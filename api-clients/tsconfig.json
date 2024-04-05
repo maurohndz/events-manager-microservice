@@ -12,8 +12,16 @@
     "paths": {
       //"@route": ["./src/**"]
       "@Config/*": ["./src/config/*"],
+      "@Typings/*": ["./src/common/typings/*"],
+      "@Tools/*": ["./src/common/tools/*", "./src/common/bases/*"],
+      "@Url/*": ["./src/common/constant/url/*"],
+      "@Messages/*": ["./src/common/constant/messages/*"],
+      "@Services/*": ["./src/services/*"],
+      "@Controllers/*": ["./src/controllers/*"],
     },
     "typeRoots": ["./node_modules/@types"],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
