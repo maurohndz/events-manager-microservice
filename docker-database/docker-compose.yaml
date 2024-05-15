@@ -1,12 +1,20 @@
 version: '3.9'
 
 services:
-  mongodb:
-    container_name: emm_mongodb
-    image: mongodb/mongodb-community-server:6.0-ubi8
+  emm_postgres:
+    container_name: emm_postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: test_db
+      LANG: es_ES.UTF-8
+      TZ: America/Caracas
     ports:
-      - "27017:27017"
+      - "5432:5432"
+    volumes:
+      - emm-postgres:/var/lib/postgresql/data
 
 volumes:
-  emm_mongodb:
+  emm-postgres:
     driver: local

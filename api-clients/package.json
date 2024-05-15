@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:dev": "dotenv -v ENVIRONMENT=development -- ts-node-dev -r tsconfig-paths/register src/index.ts"
+    "start:dev": "dotenv -v ENVIRONMENT=development -- ts-node-dev -r tsconfig-paths/register src/index.ts",
+    "pull:dev": "dotenv -e environment/.env.development -- prisma db pull"
   },
   "keywords": [],
   "author": "",
